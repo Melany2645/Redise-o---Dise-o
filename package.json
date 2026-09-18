@@ -1,0 +1,15 @@
+{
+  "name": "municipalidad-limon",
+  "version": "0.1.0",
+  "description": "Rediseño del sitio web de la Municipalidad de Limón",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
