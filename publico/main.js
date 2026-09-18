@@ -1,6 +1,4 @@
-// ---------------------------------------------------------------
-// Carrusel de "Avisos importantes"
-// ---------------------------------------------------------------
+// Carrusel de Avisos importantes
 (function avisosCarousel() {
   const track = document.getElementById("avisosTrack");
   const dotsWrap = document.getElementById("avisosDots");
@@ -22,9 +20,7 @@
 
   function goTo(index) {
     current = (index + cards.length) % cards.length;
-    // En escritorio los avisos se ven en cuadrícula; en pantallas angostas
-    // esta función queda lista para pasar a un desplazamiento de una tarjeta
-    // a la vez cuando se active la vista tipo carrusel móvil.
+    // Adapatación de los avisos
     Array.from(dotsWrap.children).forEach((d, i) =>
       d.classList.toggle("is-active", i === current),
     );
@@ -34,27 +30,38 @@
   nextBtn.addEventListener("click", () => goTo(current + 1));
 })();
 
-// ---------------------------------------------------------------
-// Menú hamburguesa (estructura lista; el comportamiento final para
-// móvil se termina de definir en la siguiente iteración del diseño)
-// ---------------------------------------------------------------
-(function mobileNav() {
+// Menú hamburguesa: abre/cierra el panel lateral. Nos falta adaptar los datos de dicho menu
+(function drawerMenu() {
   const burger = document.getElementById("burgerBtn");
-  const nav = burger ? burger.closest(".nav") : null;
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("drawerOverlay");
+  const closeBtn = document.getElementById("drawerClose");
 
-  if (!burger || !nav) return;
+  if (!burger || !drawer || !overlay) return;
+
+  function openDrawer() {
+    drawer.classList.add("is-open");
+    overlay.classList.add("is-open");
+    drawer.setAttribute("aria-hidden", "false");
+    burger.setAttribute("aria-expanded", "true");
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove("is-open");
+    overlay.classList.remove("is-open");
+    drawer.setAttribute("aria-hidden", "true");
+    burger.setAttribute("aria-expanded", "false");
+  }
 
   burger.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
-    burger.setAttribute("aria-expanded", String(isOpen));
+    const isOpen = drawer.classList.contains("is-open");
+    isOpen ? closeDrawer() : openDrawer();
   });
 
-  // Permite tocar un ítem con submenú para desplegarlo en móvil
-  nav.querySelectorAll(".has-sub > .nav__link").forEach((link) => {
-    link.addEventListener("click", (e) => {
-      if (window.innerWidth > 760) return;
-      e.preventDefault();
-      link.closest(".has-sub").classList.toggle("is-open");
-    });
+  overlay.addEventListener("click", closeDrawer);
+  closeBtn.addEventListener("click", closeDrawer);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDrawer();
   });
 })();
