@@ -1,12 +1,12 @@
 :root {
-  --verde-selva: #5a7d38;
-  --verde-avisos: #448414;
-  --verde-profundo: #21512d;
-  --crema: #e8ddc6;
+  --verde-selva: #659832;
+  --verde-avisos: #529221;
+  --verde-profundo: #116a27;
+  --crema: #e6f164;
   --cafe-tierra: #9b4f2a;
-  --dorado: #c99a3d;
+  --dorado: #dac24b;
 
-  --crema-suave: #f3eee1;
+  --crema-suave: #deff90;
   --texto: #23281f;
   --texto-suave: #55604c;
 
@@ -82,6 +82,7 @@ a {
   width: 38px;
   height: 38px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .brand__name {
@@ -545,7 +546,9 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .mvv-card:hover {
@@ -640,7 +643,9 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .dept-card:hover {
@@ -692,7 +697,9 @@ a {
   border: 1px solid rgba(30, 47, 34, 0.1);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .project-card:hover {
@@ -777,7 +784,9 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .transparency-card:hover {
@@ -833,7 +842,9 @@ a {
   border: 1px solid rgba(30, 47, 34, 0.1);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .tourism-card:hover {
@@ -892,8 +903,13 @@ a {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .maintenance-title {
