@@ -1,6 +1,7 @@
 :root {
   --verde-selva: #5a7d38;
-  --verde-profundo: #1e2f22;
+  --verde-avisos: #448414;
+  --verde-profundo: #21512d;
   --crema: #e8ddc6;
   --cafe-tierra: #9b4f2a;
   --dorado: #c99a3d;
@@ -51,6 +52,7 @@ a {
 /* Cabecera */
 .site-header {
   background: var(--verde-profundo);
+  border-bottom: 1px solid rgba(232, 221, 198, 0.45);
   position: sticky;
   top: 0;
   z-index: 30;
@@ -262,7 +264,7 @@ a {
 
 /* Sección: Avisos */
 .avisos {
-  background: var(--verde-profundo);
+  background: var(--verde-avisos);
   padding: 52px 0 44px;
   color: var(--crema);
 }
@@ -293,6 +295,20 @@ a {
   flex-direction: column;
   justify-content: space-between;
   min-height: 150px;
+}
+
+.aviso-card__image,
+.noticia-card__image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.aviso-card__image {
+  margin: -22px -22px 18px;
+  width: calc(100% + 44px);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .aviso-card__text {
@@ -409,6 +425,12 @@ a {
   padding: 22px 22px 20px;
   display: flex;
   flex-direction: column;
+}
+
+.noticia-card__image {
+  margin: -22px -22px 20px;
+  width: calc(100% + 44px);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .noticia-card__date {
