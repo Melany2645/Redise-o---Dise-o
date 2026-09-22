@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>En Línea - Municipalidad de Limón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <div class="site-header__brand">
+          <a href="index.html" class="brand">
+            <svg class="brand__icon" viewBox="0 0 40 40" aria-hidden="true">
+              <circle cx="20" cy="20" r="20" fill="#E8DDC6" />
+              <path d="M4 25 Q 12 20 20 25 T 36 25 V40 H4 Z" fill="#1E2F22" />
+              <path d="M4 29 Q 12 24.5 20 29 T 36 29 V40 H4 Z" fill="#5A7D38" />
+              <path
+                d="M17 25 C 17 16 22 12 22 8 C 22 12 26 15 26 20 C 26 23 22 25 17 25Z"
+                fill="#5A7D38"
+              />
+              <path
+                d="M17 25 C 12 15 6 13 4 14 C 9 16 14 19 15 25Z"
+                fill="#1E2F22"
+              />
+              <rect x="16" y="24" width="3" height="7" fill="#9B4F2A" />
+            </svg>
+            <span class="brand__name">Municipalidad de Limón</span>
+          </a>
+          <button
+            class="burger"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            id="burgerBtn"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <div class="site-header__contact">
+          <a href="tel:+50627584444" class="contact-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>+506 2758-4444 / 2758-7073</span>
+          </a>
+          <a href="mailto:alcaldia@municlimon.go.cr" class="contact-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="3"
+                y="5"
+                width="18"
+                height="14"
+                rx="2"
+                stroke="currentColor"
+                stroke-width="1.4"
+              />
+              <path
+                d="M4 7l8 6 8-6"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>alcaldia@municlimon.go.cr</span>
+          </a>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook" class="social-links__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M14 9h2.5V6H14c-1.9 0-3.5 1.6-3.5 3.5V12H8v3h2.5v6H14v-6h2.3l.4-3H14V9.7c0-.4.3-.7.6-.7z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="social-links__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <rect
+                  x="3"
+                  y="6"
+                  width="18"
+                  height="12"
+                  rx="3"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                />
+                <path d="M11 9.5l4 2.5-4 2.5V9.5z" fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer__head">
+        <span class="drawer__title">Menú</span>
+        <button
+          class="drawer__close"
+          type="button"
+          aria-label="Cerrar menú"
+          id="drawerClose"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M6 6l12 12M18 6L6 18"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <p class="drawer__note">Datos de ejemplo por mientras.</p>
+      <ul class="drawer__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="conozcanos.html">Conózcanos</a></li>
+        <li><a href="gestion-municipal.html">Gestión Municipal</a></li>
+        <li><a href="obras-proyectos.html">Obras y Proyectos</a></li>
+        <li><a href="transparencia.html">Transparencia</a></li>
+        <li><a href="turismo.html">Turismo</a></li>
+        <li><a href="en-linea.html" class="is-active">En Línea</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <section class="maintenance-page">
+        <div class="wrap">
+          <div class="maintenance-content">
+            <div class="maintenance-icon">🔧</div>
+            <h1 class="maintenance-title">Página en Mantenimiento</h1>
+            <p class="maintenance-text">
+              Estamos trabajando para mejorar nuestros servicios en línea.
+              Pronto estará disponible esta sección para su comodidad.
+            </p>
+            <div class="maintenance-info">
+              <p class="maintenance-note">
+                Mientras tanto, puede comunicarse con nosotros:
+              </p>
+              <ul class="maintenance-contacts">
+                <li>📞 +506 2758-4444</li>
+                <li>✉️ alcaldia@municlimon.go.cr</li>
+                <li>🏢 Visítenos en nuestras oficinas</li>
+              </ul>
+            </div>
+            <a href="index.html" class="btn-home">← Volver al Inicio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

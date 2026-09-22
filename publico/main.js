@@ -20,7 +20,6 @@
 
   function goTo(index) {
     current = (index + cards.length) % cards.length;
-    // Adapatación de los avisos
     Array.from(dotsWrap.children).forEach((d, i) =>
       d.classList.toggle("is-active", i === current),
     );
@@ -30,7 +29,7 @@
   nextBtn.addEventListener("click", () => goTo(current + 1));
 })();
 
-// Menú hamburguesa: abre/cierra el panel lateral. Nos falta adaptar los datos de dicho menu
+// Menú hamburguesa
 (function drawerMenu() {
   const burger = document.getElementById("burgerBtn");
   const drawer = document.getElementById("drawer");

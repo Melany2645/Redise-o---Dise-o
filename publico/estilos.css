@@ -262,6 +262,13 @@ a {
   color: var(--cafe-tierra);
 }
 
+.drawer__list a.is-active {
+  color: var(--cafe-tierra);
+  font-weight: 600;
+  border-left: 3px solid var(--dorado);
+  padding-left: 10px;
+}
+
 /* Sección: Avisos */
 .avisos {
   background: var(--verde-avisos);
@@ -392,6 +399,16 @@ a {
   display: block;
 }
 
+.wave-divider--bottom {
+  line-height: 0;
+  background: var(--crema-suave);
+}
+.wave-divider--bottom svg {
+  width: 100%;
+  height: 34px;
+  display: block;
+}
+
 /* Sección: Noticias */
 .noticias {
   background: var(--crema-suave);
@@ -477,11 +494,494 @@ a {
   transform: translateX(3px);
 }
 
-/*Respuestas*/
+/* Conózcanos */
+.conozcanos-hero {
+  background: var(--verde-profundo);
+  color: var(--crema);
+  padding: 64px 0 72px;
+  text-align: center;
+}
+
+.conozcanos-hero__title {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0 0 16px;
+  color: var(--crema);
+}
+
+.conozcanos-hero__subtitle {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(232, 221, 198, 0.85);
+  line-height: 1.6;
+}
+
+.conozcanos-section {
+  padding: 64px 0;
+}
+
+.conozcanos-text {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--texto);
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.mvv-card {
+  background: #fff;
+  border: 1px solid rgba(30, 47, 34, 0.08);
+  border-top: 3px solid var(--dorado);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mvv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(30, 47, 34, 0.08);
+}
+
+.mvv-card__icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.mvv-card__title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--verde-profundo);
+  margin: 0 0 14px;
+}
+
+.mvv-card__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--texto-suave);
+  margin: 0;
+}
+
+.mvv-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.mvv-card__list li {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(30, 47, 34, 0.06);
+  position: relative;
+  padding-left: 20px;
+}
+
+.mvv-card__list li::before {
+  content: "•";
+  color: var(--dorado);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Páginas Generales */
+.page-hero {
+  background: var(--verde-profundo);
+  color: var(--crema);
+  padding: 64px 0 72px;
+  text-align: center;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0 0 16px;
+  color: var(--crema);
+}
+
+.page-hero__subtitle {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(232, 221, 198, 0.85);
+  line-height: 1.6;
+}
+
+.content-section {
+  padding: 64px 0;
+}
+
+/* Gestión Municipal */
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.dept-card {
+  background: #fff;
+  border: 1px solid rgba(30, 47, 34, 0.08);
+  border-top: 3px solid var(--verde-selva);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dept-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(30, 47, 34, 0.08);
+}
+
+.dept-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.dept-card__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--verde-profundo);
+  margin: 0 0 12px;
+}
+
+.dept-card__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--texto-suave);
+  margin: 0 0 16px;
+}
+
+.dept-card__link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--cafe-tierra);
+  transition: color 0.15s ease;
+}
+
+.dept-card__link:hover {
+  color: var(--dorado);
+}
+
+/* Obras y Proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid rgba(30, 47, 34, 0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(30, 47, 34, 0.1);
+}
+
+.project-card__content {
+  padding: 22px;
+}
+
+.project-card__status {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.status-in-progress {
+  background: rgba(90, 125, 56, 0.15);
+  color: var(--verde-selva);
+}
+
+.status-planned {
+  background: rgba(201, 154, 61, 0.15);
+  color: var(--dorado);
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--verde-profundo);
+  margin: 0 0 10px;
+}
+
+.project-card__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--texto-suave);
+  margin: 0 0 16px;
+}
+
+.project-card__progress {
+  margin-top: 16px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(30, 47, 34, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--verde-selva), var(--verde-avisos));
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.project-card__percentage {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+/* Transparencia */
+.transparency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.transparency-card {
+  background: #fff;
+  border: 1px solid rgba(30, 47, 34, 0.08);
+  border-top: 3px solid var(--dorado);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transparency-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(30, 47, 34, 0.08);
+}
+
+.transparency-card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.transparency-card__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--verde-profundo);
+  margin: 0 0 12px;
+}
+
+.transparency-card__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--texto-suave);
+  margin: 0 0 18px;
+}
+
+.btn-download {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--cafe-tierra);
+  padding: 8px 16px;
+  border: 1px solid var(--cafe-tierra);
+  border-radius: var(--radius);
+  transition: all 0.15s ease;
+}
+
+.btn-download:hover {
+  background: var(--cafe-tierra);
+  color: var(--crema);
+}
+
+/* Turismo */
+.tourism-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.tourism-card {
+  background: #fff;
+  border: 1px solid rgba(30, 47, 34, 0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tourism-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(30, 47, 34, 0.1);
+}
+
+.tourism-card__content {
+  padding: 22px;
+}
+
+.tourism-card__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--verde-profundo);
+  margin: 0 0 10px;
+}
+
+.tourism-card__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--texto-suave);
+  margin: 0 0 14px;
+}
+
+.tourism-card__tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--verde-profundo);
+  background: var(--dorado);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* Página de Mantenimiento */
+.maintenance-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--crema-suave);
+  padding: 80px 24px;
+}
+
+.maintenance-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.maintenance-icon {
+  font-size: 5rem;
+  margin-bottom: 24px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.maintenance-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--verde-profundo);
+  margin: 0 0 16px;
+}
+
+.maintenance-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--texto-suave);
+  margin: 0 0 32px;
+}
+
+.maintenance-info {
+  background: #fff;
+  border: 2px solid rgba(201, 154, 61, 0.3);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.maintenance-note {
+  font-weight: 600;
+  color: var(--verde-profundo);
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.maintenance-contacts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.maintenance-contacts li {
+  font-size: 1rem;
+  color: var(--texto);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(30, 47, 34, 0.06);
+}
+
+.maintenance-contacts li:last-child {
+  border-bottom: none;
+}
+
+.btn-home {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--cafe-tierra);
+  padding: 12px 28px;
+  border: 2px solid var(--cafe-tierra);
+  border-radius: var(--radius);
+  transition: all 0.15s ease;
+}
+
+.btn-home:hover {
+  background: var(--cafe-tierra);
+  color: var(--crema);
+}
+
+/* Responsive */
 @media (max-width: 900px) {
   .avisos__track,
-  .noticias__grid {
+  .noticias__grid,
+  .mvv-grid,
+  .departments-grid,
+  .transparency-grid {
     grid-template-columns: 1fr;
+  }
+
+  .mvv-grid,
+  .departments-grid,
+  .transparency-grid {
+    max-width: 500px;
+    margin: 40px auto 0;
+  }
+
+  .projects-grid,
+  .tourism-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
@@ -499,6 +999,23 @@ a {
   }
   .site-header__contact {
     gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .conozcanos-hero__title,
+  .page-hero__title {
+    font-size: 1.8rem;
+  }
+  .conozcanos-hero,
+  .page-hero {
+    padding: 48px 0 56px;
+  }
+  .maintenance-title {
+    font-size: 1.6rem;
+  }
+  .maintenance-icon {
+    font-size: 3.5rem;
   }
 }
 
