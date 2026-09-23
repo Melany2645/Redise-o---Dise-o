@@ -17,14 +17,22 @@
       <div class="wrap site-header__inner">
         <div class="site-header__brand">
           <a href="index.html" class="brand">
-            <img
-              class="brand__icon"
-              src="imagenes/Escudo-Muni.png"
-              alt="Logo de la Municipalidad de Limón"
-            />
+            <svg class="brand__icon" viewBox="0 0 40 40" aria-hidden="true">
+              <circle cx="20" cy="20" r="20" fill="#E8DDC6" />
+              <path d="M4 25 Q 12 20 20 25 T 36 25 V40 H4 Z" fill="#1E2F22" />
+              <path d="M4 29 Q 12 24.5 20 29 T 36 29 V40 H4 Z" fill="#5A7D38" />
+              <path
+                d="M17 25 C 17 16 22 12 22 8 C 22 12 26 15 26 20 C 26 23 22 25 17 25Z"
+                fill="#5A7D38"
+              />
+              <path
+                d="M17 25 C 12 15 6 13 4 14 C 9 16 14 19 15 25Z"
+                fill="#1E2F22"
+              />
+              <rect x="16" y="24" width="3" height="7" fill="#9B4F2A" />
+            </svg>
             <span class="brand__name">Municipalidad de Limón</span>
           </a>
-
           <button
             class="burger"
             type="button"
@@ -35,7 +43,6 @@
             <span></span><span></span><span></span>
           </button>
         </div>
-
         <div class="site-header__contact">
           <a href="tel:+50627584444" class="contact-item">
             <svg class="icon" viewBox="0 0 24 24" fill="none">
@@ -127,6 +134,21 @@
         <li><a href="turismo.html">Turismo</a></li>
         <li><a href="en-linea.html">En Línea</a></li>
       </ul>
+      <div class="drawer__location">
+        <p class="drawer__location-text">Nos encontramos aquí</p>
+        <a
+          href="https://www.google.com/maps/place/Municipalidad+de+Lim%C3%B3n/@9.9920486,-83.0333483,18z/data=!4m6!3m5!1s0x8fa7059a784e6783:0x1e271fb9ed4d8763!8m2!3d9.9923092!4d-83.0335113!16s%2Fg%2F1hfpm6pmc?hl=es&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="drawer__map-link"
+        >
+          <img
+            src="imagenes/mapa-ubicacion.png"
+            alt="Ubicación Municipalidad de Limón"
+            class="drawer__map-image"
+          />
+        </a>
+      </div>
     </aside>
 
     <main>
@@ -232,16 +254,16 @@
             <article class="noticia-card">
               <img
                 class="noticia-card__image"
-                src="imagenes/grangalaparade.png"
+                src="imagenes/noticia-mascarillas.jpg"
                 alt="Uso voluntario de mascarillas"
               />
-              <span class="noticia-card__date">31 ago 2026</span>
-              <h3 class="noticia-card__title">Gran Gala Parade 2026</h3>
+              <span class="noticia-card__date">27 jul 2024</span>
+              <h3 class="noticia-card__title">
+                Uso voluntario de las mascarillas
+              </h3>
               <p class="noticia-card__excerpt">
-                Limón se llenó de música, color, alegría y orgullo durante la
-                celebración del Grand Gala Parade 2026, una jornada que reunió a
-                familias, agrupaciones y visitantes para rendir homenaje a la
-                riqueza cultural y al legado de la población afrodescendiente.
+                Basados en el Decreto Ejecutivo publicado en La Gaceta, el uso
+                de mascarilla dentro de nuestras instalaciones será voluntario…
               </p>
               <a href="#" class="noticia-card__link"
                 >Leer más
