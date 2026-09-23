@@ -3,9 +3,10 @@
   --verde-selva: #5a7d38;
   --verde-avisos: #6b9b3f;
   --verde-profundo: #1e5f2d;
-  --crema: #f0daaf;
+  --crema: #f8e7c4;
   --cafe-tierra: #9b4f2a;
-  --dorado: #978329;
+  --celeste: #fcd31c;
+  --dorado: #d3c744;
 
   --crema-suave: #e8f5c9;
   --texto: #23281f;
@@ -334,7 +335,7 @@ a {
 }
 
 .avisos .section-title {
-  color: var(--dorado);
+  color: var(--celeste);
 }
 
 .avisos__track {
@@ -548,7 +549,9 @@ a {
 
 /* Página conozcanos.html: presentación, texto y tarjetas de misión/visión/valores. */
 .conozcanos-hero {
-  background: var(--verde-avisos);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("imagenes/parqueVergas.png") center / cover no-repeat;
   color: var(--crema);
   padding: 64px 0 72px;
   text-align: center;
@@ -660,6 +663,30 @@ a {
   text-align: center;
 }
 
+.gestion-hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("imagenes/parqueVergas.png") center / cover no-repeat;
+}
+
+.obras-hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("imagenes/parqueVergas.png") center / cover no-repeat;
+}
+
+.transparencia-hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("imagenes/parqueVergas.png") center / cover no-repeat;
+}
+
+.turismo-hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("imagenes/parqueVergas.png") center / cover no-repeat;
+}
+
 .page-hero__title {
   font-family: var(--font-display);
   font-size: 2.4rem;
@@ -756,6 +783,13 @@ a {
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(30, 47, 34, 0.1);
+}
+
+.project-card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
 }
 
 .project-card__content {
@@ -905,6 +939,13 @@ a {
 
 .tourism-card__content {
   padding: 22px;
+}
+
+.tourism-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 .tourism-card__title {
