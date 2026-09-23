@@ -1,12 +1,12 @@
 :root {
-  --verde-selva: #659832;
-  --verde-avisos: #529221;
-  --verde-profundo: #116a27;
-  --crema: #e6f164;
+  --verde-selva: #5a7d38;
+  --verde-avisos: #6b9b3f;
+  --verde-profundo: #1e5f2d;
+  --crema: #e8ddc6;
   --cafe-tierra: #9b4f2a;
-  --dorado: #dac24b;
+  --dorado: #c9b03d;
 
-  --crema-suave: #deff90;
+  --crema-suave: #e8f5c9;
   --texto: #23281f;
   --texto-suave: #55604c;
 
@@ -82,7 +82,6 @@ a {
   width: 38px;
   height: 38px;
   flex-shrink: 0;
-  object-fit: contain;
 }
 
 .brand__name {
@@ -497,7 +496,7 @@ a {
 
 /* Conózcanos */
 .conozcanos-hero {
-  background: var(--verde-profundo);
+  background: var(--verde-avisos);
   color: var(--crema);
   padding: 64px 0 72px;
   text-align: center;
@@ -546,9 +545,7 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .mvv-card:hover {
@@ -603,7 +600,7 @@ a {
 
 /* Páginas Generales */
 .page-hero {
-  background: var(--verde-profundo);
+  background: var(--verde-avisos);
   color: var(--crema);
   padding: 64px 0 72px;
   text-align: center;
@@ -643,9 +640,7 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .dept-card:hover {
@@ -697,9 +692,7 @@ a {
   border: 1px solid rgba(30, 47, 34, 0.1);
   border-radius: var(--radius);
   overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
@@ -784,9 +777,7 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .transparency-card:hover {
@@ -842,9 +833,7 @@ a {
   border: 1px solid rgba(30, 47, 34, 0.1);
   border-radius: var(--radius);
   overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tourism-card:hover {
@@ -903,13 +892,8 @@ a {
 }
 
 @keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 .maintenance-title {
