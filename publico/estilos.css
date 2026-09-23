@@ -1,10 +1,11 @@
+/* Variables globales, los colores, tipografías, medidas y radios compartidos. */
 :root {
   --verde-selva: #5a7d38;
   --verde-avisos: #6b9b3f;
   --verde-profundo: #1e5f2d;
-  --crema: #e8ddc6;
+  --crema: #f0daaf;
   --cafe-tierra: #9b4f2a;
-  --dorado: #c9b03d;
+  --dorado: #978329;
 
   --crema-suave: #e8f5c9;
   --texto: #23281f;
@@ -17,10 +18,12 @@
   --wrap: 1180px;
 }
 
+/* Reinicio básico para que las medidas incluyan el borde. */
 * {
   box-sizing: border-box;
 }
 
+/* Desplazamiento suave cuando se hace paso sobre enlaces. */
 html {
   scroll-behavior: smooth;
 }
@@ -33,6 +36,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Enlaces, heredan el color del componente que los contiene. */
 a {
   color: inherit;
   text-decoration: none;
@@ -44,12 +48,13 @@ a {
   padding: 0 24px;
 }
 
+/* Tamaño de iconos. */
 .icon {
   width: 18px;
   height: 18px;
 }
 
-/* Cabecera */
+/* Cabecera: logo, nombre, contactos, redes sociales y botón de menú. */
 .site-header {
   background: var(--verde-profundo);
   border-bottom: 1px solid rgba(232, 221, 198, 0.45);
@@ -165,7 +170,7 @@ a {
   color: var(--dorado);
 }
 
-/* Panel del menú hamburguesa */
+/* Menú hamburguesa, panel lateral, fondo de bloqueo y estados abierto/cerrado. */
 .drawer-overlay {
   position: fixed;
   inset: 0;
@@ -269,7 +274,7 @@ a {
   padding-left: 10px;
 }
 
-/* Ubicación en el menú móvil */
+/* Ubicación del mapa dentro del menú lateral móvil. */
 .drawer__location {
   margin-top: 20px;
   padding-top: 16px;
@@ -292,7 +297,9 @@ a {
   border-radius: var(--radius);
   overflow: hidden;
   width: 180px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .drawer__map-link:hover {
@@ -308,9 +315,11 @@ a {
   border-radius: var(--radius);
 }
 
-/* Sección: Avisos */
+/* Avisos importantes de index.html: fondo, tarjetas, texto y controles del carrusel. */
 .avisos {
-  background: var(--verde-avisos);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("imagenes/grangalaparade.png") center / cover no-repeat;
   padding: 52px 0 44px;
   color: var(--crema);
 }
@@ -324,6 +333,10 @@ a {
   color: inherit;
 }
 
+.avisos .section-title {
+  color: var(--dorado);
+}
+
 .avisos__track {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -333,8 +346,8 @@ a {
 }
 
 .aviso-card {
-  background: rgba(232, 221, 198, 0.07);
-  border: 1px solid rgba(232, 221, 198, 0.22);
+  background: var(--crema);
+  border: 1px solid rgba(30, 47, 34, 0.1);
   border-radius: var(--radius);
   padding: 22px 22px 18px;
   display: flex;
@@ -361,7 +374,7 @@ a {
   font-size: 0.92rem;
   line-height: 1.55;
   margin: 0 0 16px;
-  color: rgba(232, 221, 198, 0.92);
+  color: var(--texto);
 }
 
 .tag {
@@ -388,7 +401,7 @@ a {
   border-radius: 50%;
   border: 1px solid rgba(232, 221, 198, 0.35);
   background: none;
-  color: var(--crema);
+  color: var(--dorado); /**/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,7 +440,7 @@ a {
   background: var(--dorado);
 }
 
-/* Divisor tipo ola */
+/* Divisores decorativos entre las secciones de la página de inicio. */
 .wave-divider {
   line-height: 0;
   background: var(--verde-profundo);
@@ -448,7 +461,7 @@ a {
   display: block;
 }
 
-/* Sección: Noticias */
+/* Noticias destacadas de index.html: cuadrícula y tarjetas color crema. */
 .noticias {
   background: var(--crema-suave);
   padding: 54px 0 76px;
@@ -474,7 +487,7 @@ a {
 }
 
 .noticia-card {
-  background: #fff;
+  background: var(--crema);
   border: 1px solid rgba(30, 47, 34, 0.1);
   border-top: 3px solid var(--verde-selva);
   border-radius: var(--radius);
@@ -533,7 +546,7 @@ a {
   transform: translateX(3px);
 }
 
-/* Conózcanos */
+/* Página conozcanos.html: presentación, texto y tarjetas de misión/visión/valores. */
 .conozcanos-hero {
   background: var(--verde-avisos);
   color: var(--crema);
@@ -584,7 +597,9 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .mvv-card:hover {
@@ -637,7 +652,7 @@ a {
   left: 0;
 }
 
-/* Páginas Generales */
+/* Encabezado y contenido compartidos por las páginas internas. */
 .page-hero {
   background: var(--verde-avisos);
   color: var(--crema);
@@ -665,7 +680,7 @@ a {
   padding: 64px 0;
 }
 
-/* Gestión Municipal */
+/* Página gestion-municipal.html: departamentos y enlaces de gestión. */
 .departments-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -679,7 +694,9 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .dept-card:hover {
@@ -719,7 +736,7 @@ a {
   color: var(--dorado);
 }
 
-/* Obras y Proyectos */
+/* Página obras-proyectos.html: proyectos, estados y barras de progreso. */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -731,7 +748,9 @@ a {
   border: 1px solid rgba(30, 47, 34, 0.1);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .project-card:hover {
@@ -802,7 +821,7 @@ a {
   color: var(--texto-suave);
 }
 
-/* Transparencia */
+/* Página transparencia.html: tarjetas de documentos y botón de descarga. */
 .transparency-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -816,7 +835,9 @@ a {
   border-radius: var(--radius);
   padding: 28px 24px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .transparency-card:hover {
@@ -860,7 +881,7 @@ a {
   color: var(--crema);
 }
 
-/* Turismo */
+/* Página turismo.html: tarjetas de lugares y etiquetas turísticas. */
 .tourism-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -872,7 +893,9 @@ a {
   border: 1px solid rgba(30, 47, 34, 0.1);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .tourism-card:hover {
@@ -909,7 +932,7 @@ a {
   border-radius: 999px;
 }
 
-/* Página de Mantenimiento */
+/* Página de mantenimiento: aviso temporal, contactos y botón para volver al inicio. */
 .maintenance-page {
   min-height: 70vh;
   display: flex;
@@ -931,8 +954,13 @@ a {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .maintenance-title {
@@ -999,8 +1027,9 @@ a {
   color: var(--crema);
 }
 
-/* Responsive */
+/* Responsive: adapta cuadrículas, encabezado y tamaños a pantallas pequeñas. */
 @media (max-width: 900px) {
+  /* Tablet y móvil: las cuadrículas pasan a una sola columna. */
   .avisos__track,
   .noticias__grid,
   .mvv-grid,
@@ -1025,6 +1054,7 @@ a {
 }
 
 @media (max-width: 760px) {
+  /* Pantallas medianas: el encabezado permite saltos y oculta el texto de contacto. */
   .site-header__inner {
     flex-wrap: wrap;
     gap: 10px;
@@ -1042,6 +1072,7 @@ a {
 }
 
 @media (max-width: 600px) {
+  /* Móviles: se reducen títulos, héroes y el icono de mantenimiento. */
   .conozcanos-hero__title,
   .page-hero__title {
     font-size: 1.8rem;
@@ -1059,6 +1090,7 @@ a {
 }
 
 @media (max-width: 480px) {
+  /* Teléfonos pequeños: se ocultan los enlaces de contacto del encabezado. */
   .site-header__contact .contact-item {
     display: none;
   }
