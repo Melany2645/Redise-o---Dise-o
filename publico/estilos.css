@@ -655,6 +655,50 @@ a {
   left: 0;
 }
 
+.alcaldia-section {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.alcaldia-section__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--verde-profundo);
+  margin: 0 0 28px;
+}
+
+.alcaldia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.alcaldia-card {
+  text-align: center;
+}
+
+.alcaldia-card__image {
+  display: block;
+  width: 190px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin: 0 auto 18px;
+  border: 5px solid var(--crema);
+  border-radius: 50%;
+  box-shadow: 0 5px 18px rgba(30, 47, 34, 0.16);
+}
+
+.alcaldia-card__role {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cafe-tierra);
+  margin: 0;
+}
+
 /* Encabezado y contenido compartidos por las páginas internas. */
 .page-hero {
   background: var(--verde-avisos);
@@ -1075,6 +1119,7 @@ a {
   .noticias__grid,
   .mvv-grid,
   .departments-grid,
+  .alcaldia-grid,
   .transparency-grid {
     grid-template-columns: 1fr;
   }
